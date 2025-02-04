@@ -77,7 +77,6 @@ h3 {
 p {
   font-weight: 700;
   font-size: 16px;
-  color: var(--primary-color);
 }
 
 .container {
@@ -357,10 +356,10 @@ p {
 }
 
 .contact-info p {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   position: relative;
-  color: var(--text-dark);
+  color: var(--text-light);
 }
 
 .map-frame {
@@ -395,6 +394,7 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  color: var(--text-light);
 }
 
 /* Адаптивность */
