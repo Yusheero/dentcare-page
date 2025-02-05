@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стоматология DENTCARE</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/v3/?apikey=e5babf74-cdbb-4086-80bd-e575ce8ba8f0&lang=ru_RU"></script>
+    <script>
+      initMap();
+      async function initMap() {
+          await ymaps3.ready;
+          const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+          const map = new YMap(
+              document.getElementById('map'),
+              {
+                  location: {
+                      center: [43.123636, 131.886805],
+                      zoom: 15
+                  }
+              }
+          );
+          map.addChild(new YMapDefaultSchemeLayer());
+      }
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,49 +60,54 @@
 
     <section class="services" id="services">
       <div class="container">
-        <h2 class="section__title">Наши услуги</h2>
-        <div class="services__grid">
-          <article class="service__card">
-            <div class="line"></div>
-            <h3>Терапевтическое лечение</h3>
-            <p>Лечение кариеса, пульпита и периодонтита с использованием микроскопа</p>
-          </article>
-    
-          <article class="service__card">
-            <div class="line"></div>
-            <h3>Эстетика улыбки</h3>
-            <p>Виниры, отбеливание и художественная реставрация зубов</p>
-          </article>
+        <div class="services__content">
+          <h2 class="section__title">Наши услуги</h2>
+          <div class="services__grid">
+            <article class="service__card">
+              <div class="line"></div>
+              <h3>Терапевтическое лечение</h3>
+              <p>Лечение кариеса, пульпита и периодонтита с использованием микроскопа</p>
+            </article>
+      
+            <article class="service__card">
+              <div class="line"></div>
+              <h3>Эстетика улыбки</h3>
+              <p>Виниры, отбеливание и художественная реставрация зубов</p>
+            </article>
 
-          <article class="service__card">
-            <div class="line"></div>
-            <h3>Имплантация</h3>
-            <p>Установка имплантов любой сложности с пожизненной гарантией</p>
-          </article>
+            <article class="service__card">
+              <div class="line"></div>
+              <h3>Имплантация</h3>
+              <p>Установка имплантов любой сложности с пожизненной гарантией</p>
+            </article>
 
-          <article class="service__card">
-            <div class="line"></div>
-            <h3>Имплантация</h3>
-            <p>Установка имплантов любой сложности с пожизненной гарантией</p>
-          </article>
+            <article class="service__card">
+              <div class="line"></div>
+              <h3>Имплантация</h3>
+              <p>Установка имплантов любой сложности с пожизненной гарантией</p>
+            </article>
+          </div>
         </div>
+        
       </div>
     </section>
 
     <section class="contacts" id="contacts">
       <div class="container">
-        <h2 class="section__title">Как нас найти</h2>
-        <div class="contacts-grid">
-          <div class="line"></div>
-          <div class="contact-info">
-            <p>Владивосток, Океанский проспект 66</p>
-            <p>+7 (999) 999-99-99</p>
-            <p>Ежедневно с 10:00 до 18:00</p>
-          </div>
-          <div class="map-frame">
-            <div class="map-placeholder">Карта</div>
+        <div class="contacts__content">
+          <h2 class="section__title">Как нас найти</h2>
+          <div class="contacts__grid">
+            <div class="line"></div>
+            <div class="contact__info">
+              <p>Владивосток, Уткинская 5</p>
+              <p>+7 (999) 999-99-99</p>
+              <p>Ежедневно с 10:00 до 18:00</p>
+            </div>
+            <div id="map" class="map-frame"> 
+            </div>
           </div>
         </div>
+        
       </div>  
     </section>
 

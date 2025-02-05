@@ -52,7 +52,6 @@ table {
   --text-light: #636E72;
   --white: #FFFFFF;
   --section-spacing: 140px;
-  --container-width: 1100px;
   --border-radius: 16px;
 }
 
@@ -80,7 +79,7 @@ p {
 }
 
 .container {
-  max-width: var(--container-width);
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -138,7 +137,7 @@ p {
 
 /* Герой секция */
 .home {
-  height: 100vh;
+  height: calc(100vh + 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,23 +147,26 @@ p {
 }
 
 .home__content {
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 16px;
 }
 
 .home__title {
   font-size: 48px;
   font-weight: 700;
   color: var(--primary-dark);
-  margin-bottom: 30px;
   line-height: 1.2;
 }
 
 .home__text {
   font-size: 20px;
   color: var(--text-light);
-  margin-bottom: 50px;
 }
 
 /* Кнопка */
@@ -192,12 +194,19 @@ p {
 /* Секция "Услуги" */
 .services {
   padding-top: 60px;
+  height: calc(100vh + 60px);
+  position: relative;
+}
+
+.services__content {
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  position: relative;
+  gap: 16px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .services::before {
@@ -295,14 +304,19 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh + 60px);
   background: var(--primary-light);
   position: relative;
   overflow: hidden;
 }
 
 .about-content {
-  max-width: 800px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   margin: 0 auto;
   text-align: center;
 }
@@ -323,39 +337,46 @@ p {
 
 /* Секция "Контакты" */
 .contacts {
+  height: calc(100vh + 60px);
   padding-top: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background: var(--primary-light);
   position: relative;
 }
 
-.contacts-grid {
+.contacts__content {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contacts__grid {
   position: relative;
   overflow: hidden;
-  width: 1200px;
+  max-width: 1200px;
+  height: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   background: var(--white);
   border-radius: var(--border-radius);
-  padding: 2rem;
   box-shadow: 0 20px 40px rgba(33, 150, 243, 0.08);
 }
 
-.contact-info {
-  width: 100%;
+.contact__info {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 2rem 2.5rem;
 }
 
-.contact-info p {
+.contact__info p {
   font-size: 18px;
   font-weight: 600;
   position: relative;
@@ -363,20 +384,11 @@ p {
 }
 
 .map-frame {
-  height: 400px;
-  border-radius: var(--border-radius);
+  height: 600px;
+  width: 100%;
   overflow: hidden;
-  background: var(--primary-light);
+  background: #727272;
   position: relative;
-}
-
-.map-placeholder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--primary-dark);
-  font-size: 18px;
 }
 
 /** Стили для футера */
@@ -389,7 +401,7 @@ p {
 }
 
 .footer__content {
-  width: 1200px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -399,37 +411,47 @@ p {
 
 /* Адаптивность */
 @media (max-width: 768px) {
-  .nav-links {
-      display: none;
+  .header {
+    padding: 0 16px;
   }
 
-  .hero {
-      padding: 100px 0 140px;
+  .logo {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    letter-spacing: -0.5px;
   }
 
-  .hero-title {
-      font-size: 36px;
+  .nav-link {
+    font-size: 14px;
+    padding: 4px 8px;
   }
 
-  .hero-text {
-      font-size: 18px;
+  .home__title {
+      font-size: 26px;
   }
 
-  .services-grid,
-  .contacts-grid {
+  .home__text {
+      font-size: 14px;
+  }
+
+  .services__grid,
+  .contacts__grid {
       grid-template-columns: 1fr;
   }
 
-  .contacts-grid {
-      padding: 30px;
-      gap: 30px;
+  .contacts {
+    height: 100%;
   }
 
-  .map-frame {
-      height: 250px;
+  .contacts__grid {
+    display: flex;
+    flex-direction: column;
   }
 
-  .service-card {
+  .map__frame {}
+
+  .service__card {
       padding: 30px 20px;
   }
 }
