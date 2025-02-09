@@ -83,8 +83,24 @@ p {
   font-size: 16px;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.link-marker {
+  color: var(--white);
+  font-weight: 800;
+}
+
 .container {
-  max-width: 1100px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -129,6 +145,14 @@ p {
   z-index: 1000;
 }
 
+.header__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -138,18 +162,21 @@ p {
 }
 
 .header__logo {
-  font-size: 28px;
+  font-family: "Forum", serif;
+  font-size: 16px;
   font-weight: 800;
   color: var(--primary-dark);
-  letter-spacing: -0.5px;
-}
-
-.logo-accent {
-  color: var(--primary-color);
+  -webkit-text-stroke: 1px var(--primary-dark); /* Обводка для WebKit-браузеров (Chrome, Safari) */
+  margin-right: 25px;
+  letter-spacing: 2px;
 }
 
 .nav-links {
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   height: 100%;
 }
 
@@ -161,7 +188,7 @@ p {
   color: var(--text-dark);
   font-weight: 500;
   transition: all 0.3s ease;
-  padding: 8px 16px;
+  padding: 8px 12px;
   height: 100%;
 }
 
@@ -222,14 +249,14 @@ p {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
   font-size: 14px;
   color: var(--text-light);
 }
 
 .home__text-item p {
   text-align: start;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .text-item__text {
@@ -316,6 +343,7 @@ p {
 
 /* Секция "Контакты" */
 .contacts {
+  padding-top: 60px;
   background: var(--primary-light);
   position: relative;
 }
@@ -328,7 +356,6 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 16px;
   margin: 0 auto;
   text-align: center;
 }
@@ -347,8 +374,8 @@ p {
   box-shadow: 0 20px 40px rgba(33, 150, 243, 0.08);
 }
 
-.contact__info {
-  width: 400px;
+.contacts__info {
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -362,10 +389,24 @@ p {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
+  color: var(--text-light);
 }
 
-.contact__info p {
+.contacts__row p {
+  text-decoration: none;
+}
+
+.contacts__row-item {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contacts__row-item p {
+  line-height: 1.4;
   text-align: start;
   font-size: 16px;
   font-weight: 600;
@@ -375,7 +416,7 @@ p {
 
 /** Стили для футера */
 .footer {
-  height: 300px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -384,12 +425,33 @@ p {
 }
 
 .footer__content {
-  width: 1200px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 12px;
   color: var(--white);
+}
+
+.footer__github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__github img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer__github a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  line-height: 1;
 }
 
 /* Адаптивность */
@@ -404,11 +466,6 @@ p {
     font-weight: 800;
     color: var(--primary-dark);
     letter-spacing: -0.5px;
-  }
-
-  .nav-link {
-    font-size: 14px;
-    padding: 4px 8px;
   }
 
   /** Секция "Главная" */
@@ -448,7 +505,7 @@ p {
 
   /** Футер */
   .footer__content {
-    padding: 0 32px;
+    padding: 30px 32px;
     width: 100%;
   }
 }
