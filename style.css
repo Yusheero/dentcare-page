@@ -83,7 +83,7 @@ h3 {
 }
 
 p {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
 }
 
@@ -158,6 +158,14 @@ p {
   align-items: center;
 }
 
+.header-top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -171,14 +179,18 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 100%;
   font-family: "Forum", serif;
   font-size: 26px;
   font-weight: 800;
   color: var(--primary-dark);
   -webkit-text-stroke: 1px var(--primary-dark); /* Обводка для WebKit-браузеров (Chrome, Safari) */
   letter-spacing: -0.5px;
+  background-image: url(./assets/denio-logo.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 34px;
+  width: 80px;
 }
 
 .nav-links {
@@ -248,6 +260,12 @@ p {
   -webkit-text-stroke: 2px var(--primary-dark); /* Обводка для WebKit-браузеров (Chrome, Safari) */
   margin-bottom: 60px;
   letter-spacing: 2px;
+  background-image: url(./assets/denio-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  height: 100px;
+  width: 200px;
 }
 
 .home__title {
@@ -327,7 +345,7 @@ p {
   padding: 30px 32px 0 32px;
 }
 
-.section__title {
+.services__title {
   width: 100%;
   font-size: 26px;
   font-weight: 800;
@@ -404,6 +422,16 @@ p {
   width: 100%;
 }
 
+.contacts__title {
+  width: 100%;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+  line-height: 1;
+}
+
 .contacts__map {
   height: 300px;
   display: none;
@@ -462,6 +490,83 @@ p {
   color: var(--text-light);
 }
 
+/** Стили для Отзывов */
+.reviews {
+  background: var(--white);
+  padding-top: 60px;
+  position: relative;
+}
+
+.reviews__container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-light);
+}
+
+.reviews__content {
+  background: var(--primary-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 32px 0 32px;
+}
+
+.reviews__title {
+  width: 100%;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+}
+
+.reviews__grid {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviews__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  gap: 6px;
+  background: var(--white);
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid var(--primary-color);
+}
+
+.reviews__card h3 {
+  pointer-events: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.reviews__card p {
+  pointer-events: none;
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.1;
+}
+
 /** Стили для футера */
 .footer {
   height: 100%;
@@ -483,7 +588,7 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 12px;
+  gap: 0.5rem;
   color: var(--white);
   padding: 30px 32px;
 }
@@ -495,10 +600,11 @@ p {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 700;
+  font-size: 0.8rem;
   background: var(--primary-light);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  width: 9rem;
+  width: 15rem;
 }
 
 .footer__github {
@@ -527,8 +633,13 @@ p {
     padding: 0 25rem;
   }
 
+  .header-top {
+    width: 20%;
+  }
+
   .nav-links {
     justify-content: flex-end;
+    width: 100%;
   }
 
   /* Секция "Главная" */
@@ -551,6 +662,8 @@ p {
 
   .home__logo {
     margin-bottom: 8rem;
+    height: 120px;
+    width: 300px;
   }
 
   .home__title {
@@ -580,7 +693,7 @@ p {
     padding: 2rem 0;
   }
 
-  .section__title {
+  .services__title {
     font-size: 32px;
   }
 
@@ -654,6 +767,37 @@ p {
 
   .contacts__row-item p {
 
+  }
+
+  /* Секция "Услуги" */
+  .reviews__container {
+    padding: 0 25rem;
+  }
+
+  .reviews__content {
+    padding: 2rem 0;
+  }
+
+  .reviews__title {
+    font-size: 32px;
+  }
+
+  .reviews__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .reviews__card {
+    height: 200px;
+  }
+
+  .reviews__card h3 {
+    font-size: 22px;
+  }
+
+  .reviews__card p {
+    font-size: 16px
   }
 
   /** Стили для футера */
