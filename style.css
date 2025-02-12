@@ -469,6 +469,14 @@ p {
   color: var(--text-light);
 }
 
+.contacts__row-phone {
+  line-height: 1.4;
+  text-align: start;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
 .contacts__row p {
   text-decoration: none;
 }
