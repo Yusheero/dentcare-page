@@ -61,6 +61,10 @@ table {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Manrope", serif;
   font-optical-sizing: auto;
@@ -163,6 +167,7 @@ p {
 }
 
 .header__logo {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,7 +230,7 @@ p {
 
 .home__content {
   padding: 0 32px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -317,10 +322,9 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   margin: 0 auto;
   text-align: center;
-  padding: 30px 32px;
+  padding: 30px 32px 0 32px;
 }
 
 .section__title {
@@ -401,8 +405,8 @@ p {
 }
 
 .contacts__map {
-  width: 350px;
   height: 300px;
+  display: none;
 }
 
 .contacts__grid {
@@ -460,11 +464,11 @@ p {
 
 /** Стили для футера */
 .footer {
-  height: 500px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   background: var(--text-light);
 }
 
@@ -484,6 +488,19 @@ p {
   padding: 30px 32px;
 }
 
+.footer__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  background: var(--primary-light);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  width: 9rem;
+}
+
 .footer__github {
   display: flex;
   justify-content: center;
@@ -498,7 +515,7 @@ p {
 
 .footer__github a {
   text-decoration: none;
-  color: var(--text-dark);
+  color: black;
   font-weight: 600;
   line-height: 1;
 }
