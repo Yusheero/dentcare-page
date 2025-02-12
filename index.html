@@ -6,14 +6,28 @@
     <title>Стоматология DENTCARE</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://mapgl.2gis.com/api/js/v1"></script>
+    <script>
+      // Ждем, пока загрузится DOM и API Яндекс.Карт
+      document.addEventListener('DOMContentLoaded', () => {
+        const map = new mapgl.Map('map', {
+          key: '40b06f9a-0098-450c-bc57-e8404d8699ca',
+          center: [131.951802, 43.098111],
+          zoom: 17,
+        });
+
+        const marker = new mapgl.Marker(map, {
+          coordinates: [131.951802, 43.098111],
+        });        
+      });
+    </script>
 </head>
 <body>
   <header class="header">
     <div class="header__container">
       <nav class="nav">
-        <!-- <div class="header__logo">ДЕН<span class="logo-accent">ИО</span></div> -->
+        <div class="header__logo">ДЕНИО</div>
         <div class="nav-links">
-          <div class="header__logo">ДЕНИО</div>
           <a href="#home" class="nav-link">Главная</a>
           <a href="#services" class="nav-link">Услуги</a>
           <a href="#contacts" class="nav-link">Контакты</a>
@@ -24,7 +38,7 @@
 
   <main class="main">
     <section class="home" id="home">
-      <div class="container">
+      <div class="home__container">
         <div class="home__logo">ДЕНИО</div>
         <div class="home__content">
           <h1 class="home__title">Современная стоматология</h1>
@@ -85,7 +99,7 @@
     </section>
 
     <section class="services" id="services">
-      <div class="container">
+      <div class="services__container">
         <div class="services__content">
           <h2 class="section__title">Наши услуги</h2>
           <div class="services__grid">
@@ -135,15 +149,13 @@
     </section>
 
     <section class="contacts" id="contacts">
-      <div class="container">
+      <div class="contacts__container">
         <div class="contacts__content">
           <h2 class="section__title">Расположение и контакты</h2>
-          <div class="contacts__info">
-
+          <div class="contacts__bottom">
+            <div class="contacts__info">
             <div class="contacts__row"><img class="icon" src="./assets/phone.png" alt=""><p>(423) 2925730</p></div>
-
             <div class="contacts__row"><img class="icon" src="./assets/whatsapp.png" alt=""><p>+7(908)992-57-30</p></div>
-
             <div class="contacts__row">
               <img class="icon" src="./assets/clock.png" alt="">
               <div class="contacts__row-item">
@@ -152,7 +164,6 @@
                 <p>сб : с 10:00 до 14:00</p>
               </div>
             </div>
-
             <div class="contacts__row">
               <img class="icon" src="./assets/circle.png" alt="">
               <div class="contacts__row-item">
@@ -160,34 +171,33 @@
                 <p>улица Борисенко 40</p>
               </div>
             </div>
-
             <div class="contacts__row">
               <img class="icon" src="./assets/mail.png" alt="">
               <div class="contacts__row-item">
                 <p>denio-clinic@yandex.ru</p>
               </div>
             </div>
-
             <div class="contacts__row">
               <img class="icon" src="./assets/ya-maps.png" alt="yandex maps">
               <div class="contacts__row-item">
                 <a class="link" href="https://yandex.ru/maps/75/vladivostok/house/ulitsa_borisenko_40/ZUoHaA5lSE0OW0JuYGJxeHRiYA4=/?ll=131.951566%2C43.098278&z=18.43">Yandex Maps</a>
               </div>
             </div>
-
             <div class="contacts__row">
               <img class="icon" src="./assets/2gis.png" alt="2gis maps">
               <div class="contacts__row-item">
                 <a class="link" href="https://2gis.ru/vladivostok/search/%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%B5%D0%BD%D0%BA%D0%BE%2040/geo/3519072864044309/131.951802%2C43.098111?m=131.951826%2C43.098133%2F18">2GIS</a>
               </div>
             </div>
-          </div>
+            </div>
+            <div class="contacts__map" id="map"></div>
+          </div>   
         </div>    
       </div>  
     </section>
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container">
         <div class="footer__content">
           <p>© 2025-2025 Стоматология «Денио»</p>
           <a class="link" href="./docs.html">Документы</ф>
