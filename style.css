@@ -470,6 +470,7 @@ p {
 }
 
 .contacts__row-phone {
+  text-decoration: none; /* Убирает подчеркивание */
   line-height: 1.4;
   text-align: start;
   font-size: 16px;
