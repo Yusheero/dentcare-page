@@ -431,7 +431,7 @@ a[href^="tel"] {
   font-size: 26px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: var(--primary-dark);
   line-height: 1;
 }
@@ -551,6 +551,7 @@ a[href^="tel"] {
 }
 
 .reviews__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -563,6 +564,14 @@ a[href^="tel"] {
   border-radius: 8px;
   text-align: center;
   border: 2px solid var(--primary-color);
+}
+
+.reviews__card img {
+  position: absolute;
+  top: -1px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 .reviews__card h3 {
@@ -633,7 +642,7 @@ a[href^="tel"] {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1rem;
   background: var(--primary-light);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -652,6 +661,12 @@ a[href^="tel"] {
   border-radius: 0.5rem;
 }
 
+.footer__github-text {
+  border-right: 2px solid var(--white);
+  padding-right: 8px;
+  font-weight: 700;
+}
+
 .footer__github img {
   width: 24px;
   height: 24px;
@@ -659,8 +674,8 @@ a[href^="tel"] {
 
 .footer__github a {
   text-decoration: none;
-  color: black;
-  font-weight: 600;
+  color: var(--white);
+  font-weight: 500;
   line-height: 1;
 }
 
