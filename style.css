@@ -73,6 +73,18 @@ body {
   background: var(--white);
 }
 
+/** Страница с документами */
+.docs-main {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--primary-light);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -120,9 +132,11 @@ a[href^="tel"] {
 
 /* Кнопка */
 .button {
+  text-decoration: none;
+  font-family: "Manrope", serif;
   width: 200px;
   height: 50px;
-  background: var(--primary-light);
+  background: var(--white);
   color: var(--primary-color);
   border-radius: 8px;
   border: 2px solid var(--primary-color);
@@ -632,7 +646,7 @@ a[href^="tel"] {
   justify-content: center;
   align-items: flex-start;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .footer__link {
@@ -650,7 +664,14 @@ a[href^="tel"] {
   width: 100%;
 }
 
+.footer__link:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  cursor: pointer;
+}
+
 .footer__github {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -658,22 +679,23 @@ a[href^="tel"] {
   background: var(--text-dark);
   padding: 1rem;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.footer__github:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  cursor: pointer;
 }
 
 .footer__github-text {
   border-right: 2px solid var(--white);
   padding-right: 8px;
   font-weight: 700;
+  color: var(--white);
 }
 
-.footer__github img {
-  width: 24px;
-  height: 24px;
-}
-
-.footer__github a {
-  text-decoration: none;
+.footer__github div {
   color: var(--white);
   font-weight: 500;
   line-height: 1;
@@ -814,6 +836,7 @@ a[href^="tel"] {
     background: var(--white);
     width: 150px;
     height: 150px;
+    border-radius: 0.5rem;
   }
 
   .contacts__map {
@@ -872,16 +895,20 @@ a[href^="tel"] {
   }
 
   .reviews__card h3 {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .reviews__card p {
-    font-size: 16px
+    font-size: 20px
   }
 
   /** Стили для футера */
   .footer {
 
+  }
+
+  .footer__link {
+    width: 30%;
   }
 
   .footer__container {
@@ -893,7 +920,7 @@ a[href^="tel"] {
   }
 
   .footer__github {
-
+    width: 30%;
   }
 
   .footer__github img {
