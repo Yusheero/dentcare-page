@@ -243,11 +243,11 @@ a[href^="tel"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .home__content {
   padding: 0 32px;
-  margin-bottom: 50px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -360,7 +360,6 @@ a[href^="tel"] {
 }
 
 .services__grid {
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -415,7 +414,7 @@ a[href^="tel"] {
   align-items: flex-start;
   margin: 0 auto;
   text-align: center;
-  padding: 30px 32px;
+  padding: 30px 32px 0 32px;
 }
 
 .contacts__bottom {
@@ -463,6 +462,10 @@ a[href^="tel"] {
   justify-content: center;
   align-items: flex-start;
   gap: 16px;
+}
+
+.contacts__qr {
+  display: none;
 }
 
 .contacts__row {
@@ -526,7 +529,7 @@ a[href^="tel"] {
   align-items: center;
   margin: 0 auto;
   text-align: center;
-  padding: 30px 32px 0 32px;
+  padding: 30px 32px 30px 32px;
 }
 
 .reviews__title {
@@ -603,6 +606,26 @@ a[href^="tel"] {
   padding: 30px 32px;
 }
 
+.footer__text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer__docs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
 .footer__link {
   display: flex;
   justify-content: center;
@@ -614,7 +637,8 @@ a[href^="tel"] {
   background: var(--primary-light);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  width: 15rem;
+  height: 3rem;
+  width: 100%;
 }
 
 .footer__github {
@@ -622,6 +646,10 @@ a[href^="tel"] {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  background: var(--text-dark);
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
 }
 
 .footer__github img {
@@ -736,8 +764,18 @@ a[href^="tel"] {
   }
 
   .contacts__content {
-    padding: 30px 0;
+    padding: 60px 0 0 0;
     gap: 1rem;
+  }
+
+  .contacts__info {
+    background: var(--primary-light);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .contacts__title {
+    font-size: 32px;
   }
 
   .contacts__bottom {
@@ -745,14 +783,30 @@ a[href^="tel"] {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     width: 100%;
+  }
+
+  .contacts__qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .contacts__qr img {
+    padding: 1rem;
+    background: var(--white);
+    width: 150px;
+    height: 150px;
   }
 
   .contacts__map {
     width: 100%;
-    height: 400px;
+    height: 529px;
     display: block;
+    border-radius: 1rem;
+    overflow: hidden;
   }
 
   .contacts__grid {
