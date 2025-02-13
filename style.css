@@ -87,11 +87,6 @@ p {
   font-size: 16px;
 }
 
-a[href^="tel"] {
-  color: inherit; /* Убирает синий цвет ссылки */
-  text-decoration: none; /* Убирает подчеркивание */
-}
-
 .icon {
   width: 24px;
   height: 24px;
@@ -475,12 +470,12 @@ a[href^="tel"] {
 }
 
 .contacts__row-phone {
-  text-decoration: none; /* Убирает подчеркивание */
+  text-decoration: none !important; /* Уирает подчеркивание */
   line-height: 1.4;
   text-align: start;
   font-size: 16px;
-  font-weight: 700;
-  color: var(--secondary-color);
+  font-weight: 700 !important;
+  color: var(--secondary-color) !important;
 }
 
 .contacts__row-item {
