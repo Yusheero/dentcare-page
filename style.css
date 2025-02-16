@@ -117,11 +117,6 @@ h3 {
   font-weight: 600;
 }
 
-p {
-  font-weight: 500;
-  font-size: 16px;
-}
-
 a[href^="tel"] {
   text-decoration: none;
   color: var(--secondary-color);
@@ -310,6 +305,11 @@ a[href^="tel"] {
   width: 200px;
 }
 
+.home__icon {
+  width: 96px;
+  height: 96px;
+}
+
 .home__title {
   font-size: 26px;
   font-weight: 700;
@@ -327,18 +327,68 @@ a[href^="tel"] {
 }
 
 .home__text-item {
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 16px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
   font-size: 14px;
-  color: var(--text-light);
+  color: var(--white);
+  background: var(--primary-light);
+}
+
+.home__text-item-one {
+  background-image: url('./assets/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/1.jpg');
+}
+
+.home__text-item-two {
+  background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__text-item-three {
+  background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__text-item-four {
+  background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__text-item-five {
+  background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__text-item-six {
+  background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__text-item-seven {
+  background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .home__text-item p {
-  text-align: start;
+  text-align: center;
   line-height: 1.4;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .text-item__text {
@@ -787,7 +837,7 @@ a[href^="tel"] {
   }
 
   .home__text-item p {
-    font-size: 22px;
+    font-size: 16px;
   }
 
   /* Секция "Услуги" */
