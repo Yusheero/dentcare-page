@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -163,7 +162,7 @@ a[href^="tel"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .button:hover {
@@ -344,6 +343,9 @@ a[href^="tel"] {
   font-weight: 700;
   color: var(--white);
   background: var(--primary-light);
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
+  -moz-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
+  box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
 }
 
 .home__content-bottom-item {
@@ -358,6 +360,9 @@ a[href^="tel"] {
   border-radius: 1rem;
   color: var(--white);
   background: var(--primary-light);
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
+  -moz-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
+  box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
 }
 
 .content-subtitle {
@@ -640,7 +645,7 @@ a[href^="tel"] {
 }
 
 .reviews__card {
-  background-image: url('./assets/map-front1.jpg');
+  background-image: url('./assets/map-front2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -698,9 +703,23 @@ a[href^="tel"] {
 
 .footer__container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer__content {
+.footer__content-left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--white);
+  padding: 30px 32px;
+}
+
+.footer__content-right {
   width: 100%;
   height: 100%;
   display: flex;
@@ -790,6 +809,20 @@ a[href^="tel"] {
 
 /* Адаптивность под ПК мониторы */
 @media (min-width: 1600px) {
+  .docs-main__content {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .docs-main__image {
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
+    -moz-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
+    box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
+  }
+
   /* Шапка */
   .header__container {
     padding: 0 25rem;
@@ -836,8 +869,8 @@ a[href^="tel"] {
 
   .home__logo {
     margin-bottom: 8rem;
-    height: 120px;
-    width: 300px;
+    height: 140px;
+    width: 318px;
   }
 
   .home__title {
@@ -1033,28 +1066,8 @@ a[href^="tel"] {
     overflow: hidden;
   }
 
-  .contacts__grid {
-
-  }
-
   .contacts__info {
     width: 45%;
-  }
-
-  .contacts__row {
-
-  }
-
-  .contacts__row p {
-
-  }
-
-  .contacts__row-item {
-
-  }
-
-  .contacts__row-item p {
-
   }
 
   /* Секция "Услуги" */
@@ -1091,35 +1104,32 @@ a[href^="tel"] {
   }
 
   /** Стили для футера */
-  .footer {
-
-  }
-
   .footer__link {
-    width: 30%;
+    width: 100%;
   }
 
   .footer__container {
+    flex-direction: row;
+    gap: 1rem;
     padding: 0 25rem;
   }
 
-  .footer__content {
+  .footer__content-left {
+    width: 30%;
+    padding: 30px 1rem 30px 0;
+    border-right: 1px solid var(--white);
+  }
+
+  .footer__content-right {
+    width: 70%;
     padding: 30px 0;
   }
 
+  .footer__text {
+    font-weight: 600;
+  }
+
   .footer__github {
-    width: 30%;
+    width: 100%;
   }
-
-  .footer__github img {
-
-  }
-
-  .footer__github a {
-
-  }
-}
-
-@media (min-width: 1600px) {
-
 }
