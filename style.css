@@ -102,7 +102,7 @@ body {
 }
 
 .docs-main__image {
-  width: 100%;
+  width: 80%;
   -webkit-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
   -moz-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
   box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
@@ -258,7 +258,7 @@ a[href^="tel"] {
 
 /* Секция "Главная" */
 .home {
-  padding-top: 150px;
+  padding-top: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -275,18 +275,7 @@ a[href^="tel"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-}
-
-.home__content {
-  padding: 0 32px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  text-align: center;
+  gap: 4rem;
 }
 
 .home__logo {
@@ -305,19 +294,25 @@ a[href^="tel"] {
   width: 200px;
 }
 
-.home__icon {
-  width: 96px;
-  height: 96px;
+.home__content {
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
 }
 
 .home__title {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--primary-dark);
   line-height: 1.2;
 }
 
-.home__text {
+.home__content-top {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -326,9 +321,18 @@ a[href^="tel"] {
   font-size: 14px;
 }
 
-.home__text-item {
-  width: 300px;
-  height: 300px;
+.home__content-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 14px;
+}
+
+.home__content-top-item {
+  width: 100%;
+  height: 350px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -336,76 +340,72 @@ a[href^="tel"] {
   align-items: center;
   gap: 2rem;
   border-radius: 1rem;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--white);
   background: var(--primary-light);
 }
 
-.home__text-item-one {
+.home__content-bottom-item {
+  width: 100%;
+  height: 350px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  color: var(--white);
+  background: var(--primary-light);
+}
+
+.content-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.item-one {
   background-image: url('./assets/1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/1.jpg');
 }
 
-.home__text-item-two {
+.item-two {
   background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.home__text-item-three {
+.item-three {
   background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.home__text-item-four {
+.item-four {
   background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/4.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.home__text-item-five {
+.item-five {
   background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/5.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.home__text-item-six {
+.item-six {
   background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/6.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.home__text-item-seven {
+.item-seven {
   background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/7.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.home__text-item p {
-  text-align: center;
-  line-height: 1.4;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.text-item__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.text-item__text-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--secondary-color);
-}
-
-.text-item__text-subtitle {
-  font-size: 14px;
 }
 
 /* Секция "Услуги" */
@@ -464,7 +464,7 @@ a[href^="tel"] {
   gap: 6px;
   background: var(--white);
   padding: 30px 20px;
-  border-radius: 8px;
+  border-radius: 1rem;
   text-align: center;
   -webkit-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
   -moz-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
@@ -640,6 +640,9 @@ a[href^="tel"] {
 }
 
 .reviews__card {
+  background-image: url('./assets/map-front1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -648,7 +651,6 @@ a[href^="tel"] {
   width: 100%;
   height: 120px;
   gap: 0.5rem;
-  background: var(--white);
   padding: 30px 20px;
   border-radius: 8px;
   text-align: center;
@@ -666,17 +668,21 @@ a[href^="tel"] {
 }
 
 .reviews__card h3 {
+  background: var(--text-dark);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
   pointer-events: none;
-  color: var(--primary-color);
-  font-size: 18px;
+  color: var(--white);
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .reviews__card p {
   pointer-events: none;
-  color: var(--text-light);
+  color: var(--text-dark);
   font-size: 14px;
+  font-weight: 600;
   line-height: 1.1;
 }
 
@@ -800,11 +806,23 @@ a[href^="tel"] {
 
   /* Секция "Главная" */
   .home {
-    padding-top: 180px;
+    padding-top: 220px;
   }
 
   .home__container {
     padding: 0 25rem;
+  }
+
+  .home__text-item-top {
+    width: 300px;
+    height: 300px;
+    font-weight: 700;
+  }
+
+  .home__text-item-bottom {
+    font-size: 10px;
+    width: 100%;
+    height: 516px;
   }
 
   .home__content {
@@ -828,16 +846,100 @@ a[href^="tel"] {
     text-align: center;
   }
 
-  .home__text {
-    gap: 1.5rem;
-  }
-
-  .home__text-item {
+  .home__content-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     gap: 1rem;
+    font-size: 14px;
+  }
+  
+  .home__content-bottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    font-size: 14px;
+  }
+  
+  .home__content-top-item {
+    width: 330px;
+    height: 330px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--primary-light);
+  }
+  
+  .home__content-bottom-item {
+    height: 500px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+    color: var(--white);
+    background: var(--primary-light);
+  }
+  
+  .content-subtitle {
+    font-size: 16px;
+    font-weight: 700;
   }
 
-  .home__text-item p {
-    font-size: 16px;
+  .item-one {
+    background-image: url('./assets/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/1.jpg');
+  }
+  
+  .item-two {
+    background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .item-three {
+    background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .item-four {
+    background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .item-five {
+    background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .item-six {
+    background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .item-seven {
+    background-image: linear-gradient(180deg, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.75) 90.5%, #050505 100%), url('./assets/7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   /* Секция "Услуги" */
@@ -860,15 +962,16 @@ a[href^="tel"] {
   }
 
   .service__card {
-    height: 200px;
+    padding: 3rem;
+    height: 300px;
   }
 
   .service__card h3 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .service__card p {
-    font-size: 16px
+    font-size: 18px
   }
 
   /* Секция "Контакты" */
@@ -975,14 +1078,16 @@ a[href^="tel"] {
 
   .reviews__card {
     height: 200px;
+    gap: 1.5rem;
   }
 
   .reviews__card h3 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .reviews__card p {
-    font-size: 20px
+    font-size: 16px;
+    font-weight: 700;
   }
 
   /** Стили для футера */
