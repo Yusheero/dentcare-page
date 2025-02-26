@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://mapgl.2gis.com/api/js/v1"></script>
     <script>
-      // Ждем, пока загрузится DOM и API Яндекс.Карт
+      // Ждем, пока загрузится DOM и API 2GIS
       document.addEventListener('DOMContentLoaded', () => {
         const map = new mapgl.Map('map', {
           key: '40b06f9a-0098-450c-bc57-e8404d8699ca',
@@ -42,9 +42,10 @@
   <main class="main">
     <section class="home" id="home">
       <div class="home__container">
-        <div class="home__logo"></div>
-        <div class="home__content">
+        <div class="home__logo">
           <h1 class="home__title">Современная стоматология</h1>
+        </div>
+        <div class="home__content">
           <div class="home__content-top">
             <div class="home__content-top-item item-one">
               Место, где Ваша улыбка обретает новое сияние
@@ -58,7 +59,7 @@
           </div>
         </div>
         <div class="home__content">
-          <h2 class="home__title">Почему выбирают нас?</h2>
+          <h2 class="home__subtitle">Почему выбирают нас?</h2>
           <div class="home__content-bottom">
             <div class="home__content-bottom-item item-four">
               <p class="content-subtitle">
