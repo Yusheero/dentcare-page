@@ -539,7 +539,7 @@ a[href^="tel"] {
   font-size: 26px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: var(--primary-dark);
 }
 
@@ -723,7 +723,7 @@ a[href^="tel"] {
   font-size: 26px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: var(--primary-dark);
 }
 
@@ -900,6 +900,10 @@ a[href^="tel"] {
 
 /* Адаптивность под ПК мониторы */
 @media (min-width: 1600px) {
+  .container {
+    padding: 0 25rem;
+  }
+
   .docs-main__content {
     padding: 2rem;
     display: grid;
@@ -912,6 +916,11 @@ a[href^="tel"] {
     -webkit-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
     -moz-box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
     box-shadow: 0px 4px 5px -1px rgba(116, 116, 116, 0.3);
+  }
+
+  /** Политика конфиденциальности **/
+  .privacy-main__block {
+    width: 100%;
   }
 
   /* Шапка */
@@ -977,6 +986,10 @@ a[href^="tel"] {
     -webkit-text-stroke: 0px var(--primary-dark); /* Обводка для WebKit-браузеров (Chrome, Safari) */
     letter-spacing: 0px;
     text-align: center;
+  }
+
+  .home__subtitle {
+    font-size: 32px;
   }
 
   .home__content-top {
