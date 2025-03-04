@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Современная стоматология DENIO во Владивостоке. Профессиональное лечение зубов, имплантация, протезирование и другие стоматологические услуги.">
+    <meta name="keywords" content="стоматология, Владивосток, лечение зубов, имплантация, протезирование, отбеливание зубов">
+    
+    <!-- Безопасность -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval' blob:; worker-src blob: 'self'; img-src 'self' data: https:; connect-src 'self' https://mapgl.2gis.com https://*.2gis.com;">
+    
+    <!-- Кэширование -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://mapgl.2gis.com">
+    
     <title>Стоматология DENIO</title>
     <link rel="icon" type="image/png" href="./assets/favicon32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://mapgl.2gis.com/api/js/v1"></script>
+    
+    <!-- Загрузка API 2GIS -->
     <script>
-      // Ждем, пока загрузится DOM и API 2GIS
-      document.addEventListener('DOMContentLoaded', () => {
-        const map = new mapgl.Map('map', {
-          key: '40b06f9a-0098-450c-bc57-e8404d8699ca',
-          center: [131.951802, 43.098111],
-          zoom: 17,
-        });
-
-        const marker = new mapgl.Marker(map, {
-          coordinates: [131.951802, 43.098111],
-        });        
-      });
+      function handle2GISError() {
+        const mapContainer = document.getElementById('map');
+        if (mapContainer) {
+          mapContainer.innerHTML = '<p style="text-align: center; padding: 20px;">Извините, карта временно недоступна. Пожалуйста, воспользуйтесь прямой ссылкой на 2GIS.</p>';
+        }
+      }
     </script>
+    <script src="https://mapgl.2gis.com/api/js/v1?onload=initMap" onerror="handle2GISError()"></script>
+    <script src="./assets/js/map.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header" role="banner">
     <div class="container">
-      <nav class="nav">
-        <a class="header-top" href="#home">
-          <div class="header__logo"></div>
+      <nav class="nav" role="navigation" aria-label="Основная навигация">
+        <a class="header-top" href="#home" aria-label="На главную">
+          <div class="header__logo" role="img" aria-label="Логотип DENIO"></div>
         </a>    
         <div class="nav-links">
           <a href="#services" class="nav-link">Услуги</a>
@@ -39,7 +50,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" role="main">
     <section class="home" id="home">
       <div class="container">
         <div class="home__logo">
@@ -113,7 +124,7 @@
             </article>
             <article class="service__card">
               <h3>Протезирование металлокерамикой, диоксид циркония</h3>
-              <p></p>
+              <p>Восстановление зубов с помощью современных материалов - металлокерамики и диоксида циркония</p>
             </article>
             <article class="service__card">
               <h3>Протезирование на имплантах</h3>
@@ -128,20 +139,20 @@
       </div>
     </section>
 
-    <section class="contacts" id="contacts">
+    <section class="contacts" id="contacts" aria-labelledby="contacts-title">
       <div class="container container-white">
         <div class="contacts__content">
-          <h2 class="contacts__title">Расположение и контакты</h2>
+          <h2 class="contacts__title" id="contacts-title">Расположение и контакты</h2>
           <div class="contacts__bottom">
             <div class="contacts__info">
             <div class="contacts__qr">
-              <img src="./assets/qr-1.png" alt="(423)2925730">
-              <img src="./assets/qr-2.png" alt="+7(908)9925730">
+              <img loading="lazy" src="./assets/qr-1.png" alt="QR-код для звонка на городской номер (423)2925730">
+              <img loading="lazy" src="./assets/qr-2.png" alt="QR-код для связи по WhatsApp +7(908)9925730">
             </div>
-            <div class="contacts__row"><img class="icon" src="./assets/phone.png" alt=""><p class="contacts__row-phone">(423) 2925730</p></div>
-            <div class="contacts__row"><img class="icon" src="./assets/whatsapp.png" alt=""><p class="contacts__row-phone">+7(908)992-57-30</p></div>
+            <div class="contacts__row"><img class="icon" src="./assets/phone.png" alt="Иконка телефона"><p class="contacts__row-phone">(423) 2925730</p></div>
+            <div class="contacts__row"><img class="icon" src="./assets/whatsapp.png" alt="Иконка WhatsApp"><p class="contacts__row-phone">+7(908)992-57-30</p></div>
             <div class="contacts__row">
-              <img class="icon" src="./assets/clock.png" alt="">
+              <img class="icon" src="./assets/clock.png" alt="Иконка часов">
               <div class="contacts__row-item">
                 <p>Режим работы :</p>
                 <p>пн - пт : с 10:00 до 19:00</p>
@@ -149,14 +160,14 @@
               </div>
             </div>
             <div class="contacts__row">
-              <img class="icon" src="./assets/circle.png" alt="">
+              <img class="icon" src="./assets/circle.png" alt="Иконка местоположения">
               <div class="contacts__row-item">
                 <p>город Владивосток</p>
                 <p>улица Борисенко 40</p>
               </div>
             </div>
             <div class="contacts__row">
-              <img class="icon" src="./assets/mail.png" alt="">
+              <img class="icon" src="./assets/mail.png" alt="Иконка почты">
               <div class="contacts__row-item">
                 <p>denio-clinic@yandex.ru</p>
               </div>
@@ -174,43 +185,43 @@
               </div>
             </div>
             </div>
-            <div class="contacts__map" id="map"></div>
+            <div class="contacts__map" id="map" role="complementary" aria-label="Карта с расположением клиники"></div>
           </div>   
         </div>    
       </div>  
     </section>
 
-    <section class="reviews" id="reviews">
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
       <div class="container container-blue">
         <div class="reviews__content">
-          <h2 class="reviews__title">Отзывы</h2>
+          <h2 class="reviews__title" id="reviews-title">Отзывы</h2>
           <div class="reviews__grid">
             <article class="reviews__card">
               <h3>Игорь</h3>
-              <p>Отличный сервис. Спасибо!
-              <img src="./assets/2gis.png" alt="">
+              <p>Отличный сервис. Спасибо!</p>
+              <img loading="lazy" src="./assets/2gis.png" alt="Отзыв оставлен на 2GIS">
             </article>
             <article class="reviews__card">
               <h3>Катерина</h3>
               <p>Хожу в эту стоматологию уже около 10 лет. Качеством оказания услуг довольна.</p>
-              <img src="./assets/2gis.png" alt="">
+              <img loading="lazy" src="./assets/2gis.png" alt="Отзыв оставлен на 2GIS">
             </article>
             <article class="reviews__card">
               <h3>Денис</h3>
               <p>Всё отлично, рекомендую!</p>
-              <img src="./assets/2gis.png" alt="">
+              <img loading="lazy" src="./assets/2gis.png" alt="Отзыв оставлен на 2GIS">
             </article>
             <article class="reviews__card">
               <h3>Алина</h3>
               <p>Супер! Доктор Фирсова лучшая!</p>
-              <img src="./assets/2gis.png" alt="">
+              <img loading="lazy" src="./assets/2gis.png" alt="Отзыв оставлен на 2GIS">
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container footer__container">
         <div class="footer__content-left">
           <div class="footer__text">
@@ -225,9 +236,6 @@
           <div class="footer__text">
             <p class="footer__text-item">Настоящая информация может быть не актуализирована. Свяжитесь с нами любым доступным способом указаным в блоке "Контакты и расположение" и мы с радостью проконсультируем вас.</p>
           </div>
-          <a class="footer__github" href="https://yusheero.github.io/yusheero-page/">
-            
-          </a>
         </div>
       </div>
     </footer>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Запрещаем индексацию служебных файлов
+Disallow: /assets/js/
+Disallow: /*.js$
+Disallow: /*.css$ 
