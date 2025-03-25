@@ -8,8 +8,7 @@
     
     <!-- Безопасность -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval' blob:; worker-src blob: 'self'; img-src 'self' data: https:; connect-src 'self' https://mapgl.2gis.com https://*.2gis.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval' blob:; worker-src blob: 'self'; img-src 'self' data: https:; connect-src 'self' https://maps.api.2gis.ru https://*.2gis.com;">
     
     <!-- Кэширование -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000">
@@ -31,7 +30,7 @@
         }
       }
     </script>
-    <script src="https://mapgl.2gis.com/api/js/v1?onload=initMap" onerror="handle2GISError()"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full" onerror="handle2GISError()"></script>
     <script src="./assets/js/map.js"></script>
 </head>
 <body>
@@ -169,7 +168,7 @@
             <div class="contacts__row">
               <img class="icon" src="./assets/mail.png" alt="Иконка почты">
               <div class="contacts__row-item">
-                <p>denio-clinic@yandex.ru</p>
+                <p>denio.vl@mail.ru</p>
               </div>
             </div>
             <div class="contacts__row">

@@ -1221,7 +1221,6 @@ a[href^="tel"] {
   }
 
   .docs-main__content {
-    padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -1305,7 +1304,7 @@ a[href^="tel"] {
   }
 
   .home__subtitle {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .home__content-top {
@@ -1414,7 +1413,7 @@ a[href^="tel"] {
   }
 
   .services__title {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .services__grid {
@@ -1436,11 +1435,6 @@ a[href^="tel"] {
     font-size: 18px
   }
 
-  /* Секция "Контакты" */
-  .contacts {
-
-  }
-
   .contacts__container {
     padding: 0 25rem;
     background: var(--white);
@@ -1459,7 +1453,7 @@ a[href^="tel"] {
   }
 
   .contacts__title {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .contacts__bottom {
@@ -1509,7 +1503,7 @@ a[href^="tel"] {
   }
 
   .reviews__title {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .reviews__grid {

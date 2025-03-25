@@ -1,8 +1,8 @@
 // Конфигурация карты
 const MAP_CONFIG = {
-  key: '40b06f9a-0098-450c-bc57-e8404d8699ca',
-  center: [131.951802, 43.098111],
-  zoom: 17
+  center: [43.098111, 131.951802], // Обратите внимание на порядок координат: [широта, долгота]
+  zoom: 17,
+  key: '40b06f9a-0098-450c-bc57-e8404d8699ca'
 };
 
 // Инициализация карты
@@ -14,33 +14,26 @@ function initMap() {
     return;
   }
 
-  if (typeof mapgl === 'undefined') {
-    console.error('API 2GIS не загружено');
-    mapContainer.innerHTML = '<p style="text-align: center; padding: 20px;">Извините, карта временно недоступна. Пожалуйста, воспользуйтесь прямой ссылкой на 2GIS.</p>';
-    return;
-  }
-
   try {
-    const map = new mapgl.Map('map', MAP_CONFIG);
-    
-    // Добавление маркера
-    new mapgl.Marker(map, {
-      coordinates: MAP_CONFIG.center
+    // Инициализация RasterJS API
+    DG.then(function() {
+      // Создание растровой карты
+      const map = DG.map('map', {
+        center: MAP_CONFIG.center,
+        zoom: MAP_CONFIG.zoom,
+      });
+      
+      // Добавление маркера на карту
+      DG.marker(MAP_CONFIG.center).addTo(map);
     });
-
   } catch (error) {
     console.error('Ошибка при инициализации карты:', error);
     mapContainer.innerHTML = '<p style="text-align: center; padding: 20px;">Извините, карта временно недоступна. Пожалуйста, воспользуйтесь прямой ссылкой на 2GIS.</p>';
   }
 }
 
-// Инициализация карты после загрузки DOM и API
+// Загрузка карты после видимости контейнера
 function loadMap() {
-  if (typeof mapgl === 'undefined') {
-    console.warn('API 2GIS не загружено');
-    return;
-  }
-
   // Проверяем видимость контейнера карты
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -57,4 +50,5 @@ function loadMap() {
   }
 }
 
+// Инициализация после загрузки DOM
 document.addEventListener('DOMContentLoaded', loadMap); 
